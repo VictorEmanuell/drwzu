@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView } from 'react-native';
 
 import AppLoading from 'expo-app-loading';
 import { useFonts, Ubuntu_400Regular, Ubuntu_500Medium } from '@expo-google-fonts/ubuntu';

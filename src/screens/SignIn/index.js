@@ -23,7 +23,7 @@ export function SignIn() {
   }).start();
 
   return (
-    <KeyboardAvoidingView style={{ flex: 1 }} behavior='height'>
+    <KeyboardAvoidingView style={{ flex: 1 }} behavior='height' keyboardVerticalOffset={60}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
           <View style={styles.welcome}>
@@ -34,7 +34,7 @@ export function SignIn() {
           <View style={styles.signInWithOAuth}>
             <TouchableOpacity
               style={styles.buttonGoogle}
-              activeOpacity={0.8}
+              activeOpacity={0.9}
               onPress={() => ''}
             >
               <Image
@@ -46,7 +46,7 @@ export function SignIn() {
 
             <TouchableOpacity
               style={styles.buttonMeta}
-              activeOpacity={0.8}
+              activeOpacity={0.9}
               onPress={() => ''}
             >
               <Image

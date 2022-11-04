@@ -14,8 +14,7 @@ export function SignUp() {
   const [confirmPasswordInput, setConfirmPasswordInput] = useState('');
 
   const fadeInUp = useRef(new Animated.Value(-130)).current;
-  const marginAnimatedWelcome = useRef(new Animated.Value(100)).current;
-  const marginAnimatedSignInOptions = useRef(new Animated.Value(50)).current;
+  const marginAnimatedWelcome = useRef(new Animated.Value(80)).current;
 
   const navigation = useNavigation();
 
@@ -26,14 +25,8 @@ export function SignUp() {
   }).start();
 
   Animated.timing(marginAnimatedWelcome, {
-    toValue: 65,
+    toValue: 120,
     duration: 500,
-    useNativeDriver: false
-  }).start();
-
-  Animated.timing(marginAnimatedSignInOptions, {
-    toValue: 30,
-    duration: 700,
     useNativeDriver: false
   }).start();
 
@@ -43,33 +36,7 @@ export function SignUp() {
         <View style={styles.container}>
           <Animated.View style={[styles.welcome, { marginTop: marginAnimatedWelcome }]}>
             <Text style={styles.welcomeText}>Bem-Vindo</Text>
-            <Text style={styles.signInText}>Entre para começar</Text>
-          </Animated.View>
-
-          <Animated.View style={[styles.signInWithOAuth, { marginTop: marginAnimatedSignInOptions }]}>
-            <TouchableOpacity
-              style={styles.buttonGoogle}
-              activeOpacity={0.8}
-              onPress={() => ''}
-            >
-              <Image
-                style={styles.googleIcon}
-                source={require('../../assets/google.png')}
-              />
-              <Text style={styles.googleText}>Entrar com Google</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.buttonMeta}
-              activeOpacity={0.8}
-              onPress={() => ''}
-            >
-              <Image
-                style={styles.metaIcon}
-                source={require('../../assets/meta.png')}
-              />
-              <Text style={styles.metaText}>Entrar com meta</Text>
-            </TouchableOpacity>
+            <Text style={styles.signInText}>Cadastre-se para começar</Text>
           </Animated.View>
 
           <Animated.View
@@ -120,7 +87,12 @@ export function SignUp() {
                 textColor={'white'}
                 text={'Continuar'}
                 buttonStyle={{ marginTop: 50 }}
-                onPress={() => ''}
+                onPress={() => {
+                  navigation.navigate('ChooseAvatar', {
+                    login: loginInput,
+                    password: passwordInput
+                  })
+                }}
                 disabled={loginInput.length && passwordInput.length && confirmPasswordInput.length > 0 ? false : true}
               />
             </LinearGradient>

@@ -7,12 +7,12 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
     },
     welcome: {
         padding: 10,
         alignItems: 'center',
-        marginTop: 100
+        marginTop: '20%'
     },
     welcomeText: {
         ...GlobalStyles.h1,
@@ -23,8 +23,7 @@ export const styles = StyleSheet.create({
     },
     signInWithOAuth: {
         width: '75%',
-        height: 120,
-        marginTop: 50,
+        marginTop: '10%',
         justifyContent: 'space-between',
     },
     buttonGoogle: {
@@ -34,6 +33,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         elevation: 4,
+        marginVertical: '5%'
     },
     googleIcon: {
         width: 28,
@@ -50,6 +50,7 @@ export const styles = StyleSheet.create({
         backgroundColor: '#2079FF',
         flexDirection: 'row',
         alignItems: 'center',
+        marginVertical: '5%'
     },
     metaIcon: {
         width: 28,
@@ -63,7 +64,8 @@ export const styles = StyleSheet.create({
     },
     createAccount: {
         flexDirection: 'row',
-        marginTop: 25
+        marginTop: '5%',
+        marginBottom: '20%'
     },
     createAccountText: {
         ...GlobalStyles.h5,
@@ -77,9 +79,10 @@ export const styles = StyleSheet.create({
     },
     containerForm: {
         width: '100%',
-        position: 'absolute',
+        flexGrow: 1
     },
     containerFormGradient: {
+        flexGrow: 1,
         paddingVertical: 50,
         alignItems: 'center',
         borderTopRightRadius: 20,
@@ -115,5 +118,6 @@ export const styles = StyleSheet.create({
     submitButtonText: {
         ...GlobalStyles.h5,
         color: GlobalStyles.colors.white,
+        marginBottom: '5%'
     }
 });

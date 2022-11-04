@@ -44,7 +44,7 @@ export default function Button({ backgroundColor, textColor, buttonStyle, textSt
                 end={{ x: -0.2, y: -0.2 }}
             >
                 <TouchableOpacity
-                    activeOpacity={0.8}
+                    activeOpacity={0.9}
                     onPress={() => onPress()}
                     disabled={disabled}
                 >
@@ -60,7 +60,7 @@ export default function Button({ backgroundColor, textColor, buttonStyle, textSt
         return (
             <TouchableOpacity
                 style={[styles.submitButton, { backgroundColor: backgroundColors(backgroundColor) }, buttonStyle]}
-                activeOpacity={0.8}
+                activeOpacity={0.9}
                 onPress={() => onPress()}
                 disabled={disabled}
             >
