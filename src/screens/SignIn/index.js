@@ -79,14 +79,14 @@ export function SignIn() {
               style={styles.containerFormGradient}
             >
               <TextInput
-                style={[styles.formTextInput, {color: 'white'}]}
+                style={[styles.formTextInput, { color: 'white' }]}
                 placeholder=' Login'
                 placeholderTextColor='#FFFFFF'
                 autoCorrect={false}
                 onChangeText={(content) => setLoginInput(content)}
               />
               <TextInput
-                style={[styles.formTextInput, {color: 'white'}]}
+                style={[styles.formTextInput, { color: 'white' }]}
                 placeholder=' Senha'
                 placeholderTextColor='#FFFFFF'
                 secureTextEntry={true}
@@ -107,8 +107,8 @@ export function SignIn() {
                 textColor={'white'}
                 text={'Continuar'}
                 buttonStyle={{ marginTop: 50 }}
-                onPress={() => ''}
                 disabled={loginInput.length && passwordInput.length > 0 ? false : true}
+                onPress={() => navigation.navigate('Home')}
               />
             </LinearGradient>
           </Animated.View>

@@ -3,28 +3,18 @@ import {
     View,
     Text,
     TouchableOpacity,
-    Image,
     ImageBackground,
-    TextInput,
-    Animated,
-    KeyboardAvoidingView,
-    Keyboard,
-    TouchableWithoutFeedback
 } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
 
 import { AntDesign } from '@expo/vector-icons';
-
-import { useNavigation } from '@react-navigation/native';
-
 import { styles } from './styles';
 
 import Button from '../../../components/Button';
-
 import DefaultAvatar from '../../../assets/defaultAvatar.png'
 
-export function ChooseAvatar() {
+export function ChooseAvatar(props) {
     const navigation = useNavigation();
 
     const [image, setImage] = useState(null);
@@ -41,6 +31,8 @@ export function ChooseAvatar() {
             setImage(result.uri);
         }
     };
+
+    console.log(props.route.params, image)
 
     return (
         <View style={styles.container}>
@@ -65,7 +57,7 @@ export function ChooseAvatar() {
                 text={'Continuar'}
                 textColor="white"
                 backgroundColor={'black'}
-                onPress={() => ''}
+                onPress={() => navigation.navigate('Home')}
             >
 
             </Button>

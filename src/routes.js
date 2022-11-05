@@ -4,6 +4,8 @@ import { SignIn } from './screens/SignIn';
 import { SignUp } from './screens/SignUp';
 import { ChooseAvatar } from './screens/SignUp/ChooseAvatar';
 
+import { Home } from './screens/Home';
+
 const Stack = createNativeStackNavigator();
 
 export default function Routes() {
@@ -31,6 +33,15 @@ export default function Routes() {
                 options={{
                     headerShown: false,
                     animation: 'slide_from_right'
+                }}
+            />
+
+            <Stack.Screen
+                name="Home"
+                component={Home}
+                options={{
+                    headerShown: false,
+                    animation: 'slide_from_bottom'
                 }}
             />
         </Stack.Navigator>

@@ -25,8 +25,8 @@ export function SignUp() {
   }).start();
 
   Animated.timing(marginAnimatedWelcome, {
-    toValue: 120,
-    duration: 500,
+    toValue: 100,
+    duration: 800,
     useNativeDriver: false
   }).start();
 

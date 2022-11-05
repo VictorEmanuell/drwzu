@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 import GlobalStyles from '../../utils/GlobalStyles';
 
@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'flex-start',
+        paddingTop: Platform.OS === 'android' ? 25 : 0,
     },
     welcome: {
         padding: 10,

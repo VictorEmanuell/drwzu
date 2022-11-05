@@ -15,10 +15,11 @@ export const styles = StyleSheet.create({
     },
     chooseAvatarButton: {
         backgroundColor: GlobalStyles.colors.gray,
-        padding: 80,
+        padding: 90,
         borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
         justifyContent: 'flex-end',
-        elevation: 2
+        elevation: 2,
+        top: -80
     },
     avatarImageStyle: {
         borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
